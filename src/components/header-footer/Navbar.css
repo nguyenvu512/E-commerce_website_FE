@@ -1,0 +1,173 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; /* Đổi màu nền thành trắng */
+  color: #333; /* Đổi màu chữ thành màu tối để dễ đọc trên nền trắng */
+  padding: 15px 20px; /* Tăng chiều cao header */
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.navbar-logo a {
+  color: #333; /* Đổi màu chữ logo */
+  text-decoration: none;
+  font-size: 1.8em; /* Tăng kích thước chữ logo */
+  font-weight: bold;
+}
+
+/* Navbar.css */
+
+.navbar-search .search-input {
+  height: 40px; /* Điều chỉnh chiều cao của input */
+  padding: 5px; /* Điều chỉnh padding nếu cần */
+}
+
+.navbar-search .search-btn {
+  height: 40px; /* Điều chỉnh chiều cao của button */
+  padding: 5px 10px; /* Điều chỉnh padding nếu cần */
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Giảm khoảng cách giữa các phần tử */
+}
+
+.navbar-links ul {
+  display: flex;
+  gap: 20px; /* Giảm khoảng cách giữa các phần tử */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links ul li a {
+  color: #333; /* Đổi màu chữ cho các liên kết */
+  text-decoration: none;
+  font-size: 1.2rem; /* Tăng kích thước chữ cho các liên kết */
+  transition: color 0.3s;
+}
+
+.navbar-links ul li a:hover {
+  color: #6c6c6c; /* Màu chữ khi hover */
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 10px 15px; /* Tăng kích thước hộp tìm kiếm */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em; /* Tăng kích thước chữ trong hộp tìm kiếm */
+  width: 200px; /* Thay đổi chiều rộng của input */
+}
+
+.search-btn {
+  padding: 10px 15px; /* Tăng kích thước nút tìm kiếm */
+  background-color: #333; /* Đổi màu nền nút tìm kiếm thành màu tối */
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  width: 50px; /* Thay đổi chiều rộng của nút tìm kiếm */
+}
+
+.search-btn:hover {
+  background-color: #555; /* Màu nền khi hover */
+}
+
+/* Navbar.css */
+
+.cart-btn {
+  background-color: transparent; /* Nền trong suốt */
+  border: none; /* Không có viền */
+  color: #333; /* Màu chữ */
+  cursor: pointer; /* Con trỏ khi hover */
+  font-size: 1.7rem;
+}
+
+.cart-btn:hover {
+  color: #555; /* Màu chữ khi hover */
+}
+
+.navbar-account {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Tăng khoảng cách giữa Đăng Nhập và Đăng Xuất */
+  flex-direction: row;
+}
+
+.account-text {
+  color: #333; /* Đổi màu chữ cho tài khoản */
+  text-decoration: none;
+  font-size: 1.1rem; /* Tăng kích thước chữ cho tài khoản */
+  transition: color 0.3s;
+}
+
+.account-text:hover {
+  color: #707070; /* Màu chữ khi hover */
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333; /* Đổi màu thanh hamburger */
+  border-radius: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff; /* Đổi màu nền menu thành trắng */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    display: none;
+    padding: 20px;
+    z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .navbar-toggler {
+    z-index: 2000; /* Đảm bảo nút mở menu nằm trên các phần tử khác */
+    position: relative; /* Đảm bảo vị trí tương đối */
+  }
+
+  .hamburger {
+    display: flex; /* Hiện hamburger khi màn hình nhỏ */
+  }
+
+  /* Điều chỉnh kích thước chữ cho màn hình nhỏ */
+  .navbar-links ul li a {
+    font-size: 1.2em; /* Tăng kích thước chữ cho các liên kết */
+  }
+
+  .navbar-logo a {
+    font-size: 1.5em; /* Tăng kích thước logo */
+  }
+}
