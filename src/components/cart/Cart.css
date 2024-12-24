@@ -1,0 +1,58 @@
+.cart-container {
+  display: flex;
+  gap: 20px; /* Khoảng cách giữa các phần */
+  width: 100%; /* Chiếm toàn bộ chiều ngang */
+  flex-wrap: wrap; /* Cho phép xuống dòng khi không đủ không gian */
+  box-sizing: border-box;
+  border-radius: 10px !important;
+}
+.cart-navbar-container {
+  display: flex;
+  background-color: white;
+  padding: 10px 16px;
+  padding-bottom: 0;
+  border-radius: 10px;
+}
+.cart-navbar-checkbox {
+  flex-basis: 65%;
+}
+.cart-navbar-quantity {
+  flex-basis: 18%;
+}
+.cart-navbar-price {
+  flex-basis: 17%;
+}
+.cart-items {
+  flex: 7;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-info-container {
+  flex: 3;
+  background-color: #fff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+/* Media Query để điều chỉnh giao diện khi màn hình nhỏ */
+@media (max-width: 768px) {
+  .cart-container {
+    flex-direction: column; /* Chuyển sang bố trí dọc */
+  }
+
+  .cart-items,
+  .cart-info-container {
+    flex: 1 1 100%; /* Chiếm toàn bộ chiều ngang */
+  }
+}
+@media (max-width: 908px) {
+  .cart-navbar-quantity {
+    display: none;
+  }
+  .cart-navbar-price {
+    display: none;
+  }
+}

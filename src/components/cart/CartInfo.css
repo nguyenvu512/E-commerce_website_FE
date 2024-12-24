@@ -1,0 +1,95 @@
+.cart-info-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.cart-info-price-container {
+  display: flex;
+}
+.cart-info-price-container-title {
+  flex-basis: 60%;
+  font-size: 1.1rem;
+}
+.cart-info-price-container-price {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.cart-info-shippingFee-container {
+  display: flex;
+}
+.cart-info-shippingFee-container-title {
+  flex-basis: 60%;
+  font-size: 1.1rem;
+}
+.cart-info-shippingFee-container-price {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.cart-info-totalPrice-container {
+  display: flex;
+}
+.cart-info-totalPrice-container-title {
+  flex-basis: 60%;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.cart-info-totalPrice-container-price {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.cart-info-paymentBtn-container {
+  display: flex;
+}
+
+.cart-info-paymentBtn {
+  width: 100%;
+  background-color: black; /* Màu nền khi hover */
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 80px;
+  border: 1px solid black; /* Thêm viền cố định */
+
+  position: relative; /* Đặt nút ở trạng thái tương đối */
+  display: inline-block; /* Để pseudo-element hoạt động */
+  overflow: hidden; /* Ẩn phần tử tràn */
+  z-index: 1; /* Đảm bảo nội dung ở trên pseudo-element */
+  transition: color 0.3s ease; /* Chuyển đổi màu chữ */
+}
+
+.cart-info-paymentBtn::before {
+  content: ""; /* Nội dung giả */
+  position: absolute;
+  top: 0;
+  left: -100%; /* Bắt đầu ngoài màn hình bên trái */
+  width: 100%; /* Chiều rộng phủ đầy */
+  height: 100%; /* Chiều cao phủ đầy */
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  z-index: -1; /* Nằm phía sau nội dung */
+  transition: left 0.6s ease; /* Hiệu ứng trượt */
+  border-radius: 10px;
+}
+
+.cart-info-paymentBtn:hover::before {
+  left: 0; /* Trượt vào từ bên trái */
+}
+
+.cart-info-paymentBtn:hover {
+  color: black; /* Đổi màu chữ khi hover */
+}

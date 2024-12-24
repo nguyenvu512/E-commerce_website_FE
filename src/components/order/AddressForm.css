@@ -1,0 +1,3 @@
+.small-placeholder::placeholder {
+  font-size: 0.9rem; /* Nhỏ hơn */
+}

@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff; /* Đổi màu nền thành trắng */
+  background-color: #fff !important; /* Đổi màu nền thành trắng */
   color: #333; /* Đổi màu chữ thành màu tối để dễ đọc trên nền trắng */
   padding: 15px 20px; /* Tăng chiều cao header */
   font-family: Arial, sans-serif;
