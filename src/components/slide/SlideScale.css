@@ -1,0 +1,14 @@
+.slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 3s;
+}
+.slide img:hover {
+  transform: scale(1.1);
+}
+.slide {
+  overflow: hidden;
+  position: relative;
+}

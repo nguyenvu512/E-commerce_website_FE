@@ -1,0 +1,46 @@
+.card {
+  text-decoration: none;
+  color: black;
+  text-align: left;
+  border: none;
+  overflow: hidden;
+  position: relative;
+}
+.card .title strong {
+  font-size: 15px;
+  display: block; /* Đảm bảo strong là một khối để kích thước có hiệu lực */
+  max-width: 350px; /* Đặt chiều rộng tối đa phù hợp */
+  white-space: nowrap; /* Không cho phép xuống dòng */
+  overflow: hidden; /* Ẩn nội dung vượt quá kích thước */
+  text-overflow: ellipsis; /* Hiển thị dấu ... */
+}
+.card .title span {
+  color: red;
+}
+.card .discount {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  height: 25px;
+  width: 50px;
+  font-size: 13px;
+  font-weight: bold;
+  background-color: white;
+  color: rgb(243, 66, 66);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .title del {
+  opacity: 0.3;
+}
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.25s;
+}
+.card img:hover {
+  transform: translateY(-4px);
+}

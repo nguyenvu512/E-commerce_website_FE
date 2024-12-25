@@ -1,0 +1,29 @@
+.img-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+.img-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img-card {
+  height: 70px;
+  width: 70px;
+  margin-bottom: 7px;
+}
+.img-card img:hover {
+  border: 1px black solid;
+}
+.current {
+  border: 1px black solid;
+}
+@media (max-width: 768px) {
+  .hidden-on-small {
+    display: none;
+  }
+}

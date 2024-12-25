@@ -1,0 +1,143 @@
+.img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+.img {
+  height: 620px;
+}
+.info span {
+  font-weight: bold;
+}
+.info {
+  font-size: 18px;
+}
+.price span {
+  color: red;
+}
+.size {
+  display: flex;
+}
+.size-item {
+  border: 1px black solid;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.active {
+  background: black;
+  color: white;
+}
+.add-cart .btn-dark {
+  position: relative; /* Đặt nút ở trạng thái tương đối */
+  display: inline-block; /* Để pseudo-element hoạt động */
+  color: white; /* Màu chữ ban đầu */
+  background-color: rgb(184, 180, 180); /* Màu nền ban đầu */
+  padding: 10px 20px; /* Khoảng cách nội dung */
+  border: none; /* Bỏ đường viền */
+  text-decoration: none; /* Bỏ gạch chân */
+  overflow: hidden; /* Ẩn phần tử tràn */
+  z-index: 1; /* Đảm bảo nội dung ở trên pseudo-element */
+  transition: color 0.3s ease; /* Chuyển đổi màu chữ */
+}
+
+.add-cart .btn-dark::before {
+  content: ""; /* Nội dung giả */
+  position: absolute;
+  top: 0;
+  left: -100%; /* Bắt đầu ngoài màn hình bên trái */
+  width: 100%; /* Chiều rộng phủ đầy */
+  height: 100%; /* Chiều cao phủ đầy */
+  background-color: whitesmoke; /* Màu nền khi hover */
+  z-index: -1; /* Nằm phía sau nội dung */
+  transition: left 0.3s ease; /* Hiệu ứng trượt */
+}
+
+.add-cart .btn-dark:hover::before {
+  left: 0; /* Trượt vào từ bên trái */
+}
+
+.add-cart .btn-dark:hover {
+  color: black; /* Đổi màu chữ khi hover */
+}
+.description span {
+  font-size: 15px;
+  font-weight: normal;
+}
+.next-img img {
+  height: 385px;
+}
+/* Ẩn phần tử khi màn hình nhỏ hơn 768px */
+@media (max-width: 992px) {
+  .hidden-on-small {
+    display: none;
+  }
+}
+.next-img-small {
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+.next-img-small img {
+  height: 50px;
+}
+@media (min-width: 992px) {
+  .hidden-onn-small {
+    display: none;
+  }
+}
+.current {
+  border: 1px solid black;
+}
+.color-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid black;
+  width: 130px;
+  align-self: center;
+}
+.active-color {
+  color: white;
+  background: black;
+}
+.color-title {
+  color: 13px;
+}
+.discount-item {
+  background-color: rgb(184, 180, 180); /* Màu nền ban đầu */
+}
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.post {
+  justify-content: right;
+  margin-top: 5px;
+}
+.btn-post {
+  width: 150px;
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+}
+.btn-post:hover {
+  background-color: black;
+  color: white;
+}
+.content textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều rộng */
+}
+.post .btn-post {
+  width: 150px;
+  border: none;
+  border-radius: 8px;
+}

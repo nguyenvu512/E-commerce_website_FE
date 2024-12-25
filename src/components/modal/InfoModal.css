@@ -1,0 +1,47 @@
+.info-modal-overlow {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info-modal {
+  height: 450px;
+  width: 600px;
+  background-color: white;
+  position: absolute;
+  z-index: 999;
+  padding: 15px;
+  border-radius: 10px;
+}
+.btn-close-info-modal {
+  border: none;
+  width: 150px;
+  border-radius: 8px;
+  height: 40px;
+  padding: 0;
+  transition: 0.2s;
+}
+.btn-update-info {
+  border: none;
+  width: 150px;
+  border-radius: 8px;
+  height: 40px;
+  padding: 0;
+  transition: 0.2s;
+}
+.btn-close-info-modal:hover {
+  background-color: #dc3545;
+}
+.btn-update-info:hover {
+  background-color: #ffc107;
+}
+.info-modal input,
+select {
+  height: 35px;
+}

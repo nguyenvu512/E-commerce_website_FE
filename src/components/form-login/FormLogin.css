@@ -1,0 +1,155 @@
+.label-login,
+.label-register {
+  padding: 10px;
+  cursor: pointer;
+}
+.img-login {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.img-login img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+.line {
+  height: 1px;
+  width: 50%;
+  background-color: black;
+  transition: 0.5s;
+}
+.line-login {
+  transform: translateX(0);
+}
+.line-register {
+  transform: translateX(100%);
+}
+.line-root {
+  overflow: hidden;
+}
+.username-input-login input,
+.password-input-login input {
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  font-size: 16px;
+}
+.username-input-login {
+  margin-bottom: 15px;
+}
+.icon-toggle-password {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 37%;
+  right: 4%;
+}
+.password-input-login {
+  position: relative;
+}
+.form-login {
+  font-size: 16px;
+  transition: 0.5s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: white;
+  z-index: 3;
+}
+.forget-password {
+  font-size: 16px;
+  margin-top: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.btn-login .btn-dark {
+  position: relative; /* Đặt nút ở trạng thái tương đối */
+  display: inline-block; /* Để pseudo-element hoạt động */
+  color: white; /* Màu chữ ban đầu */
+  background-color: black !important; /* Màu nền ban đầu */
+  padding: 10px 20px; /* Khoảng cách nội dung */
+  border: none; /* Bỏ đường viền */
+  text-decoration: none; /* Bỏ gạch chân */
+  overflow: hidden; /* Ẩn phần tử tràn */
+  z-index: 1; /* Đảm bảo nội dung ở trên pseudo-element */
+  transition: color 0.3s ease; /* Chuyển đổi màu chữ */
+  width: 100%;
+  height: 45px;
+}
+
+.btn-login .btn-dark::before {
+  content: ""; /* Nội dung giả */
+  position: absolute;
+  top: 0;
+  left: -100%; /* Bắt đầu ngoài màn hình bên trái */
+  width: 100%; /* Chiều rộng phủ đầy */
+  height: 100%; /* Chiều cao phủ đầy */
+  background-color: #707070 !important; /* Màu nền khi hover */
+  z-index: -1; /* Nằm phía sau nội dung */
+  transition: left 0.3s ease; /* Hiệu ứng trượt */
+}
+
+.btn-login .btn-dark:hover::before {
+  left: 0; /* Trượt vào từ bên trái */
+}
+.btn-login .btn-dark:hover {
+  color: black !important; /* Đổi màu chữ khi hover */
+}
+.close-btn-small-screen i {
+  font-size: 40px;
+  cursor: pointer;
+  display: none;
+  margin-top: 4px;
+}
+@media (max-width: 768px) {
+  .close-btn-small-screen i {
+    display: block;
+    color: #707070;
+  }
+}
+.form-login-container {
+  margin-bottom: 15px;
+}
+.username-input-register input,
+.phonenumber-input-register input,
+.gender-input-register select,
+.email-input-register input,
+.dob-input-register select,
+.password-input-register input {
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  font-size: 16px;
+}
+.label-margin-top {
+  margin-top: 15px;
+}
+.password-input-register {
+  margin-bottom: 15px;
+}
+.check-data-register {
+  margin-bottom: 10px;
+}
+.check-data-register span {
+  color: red;
+  font-size: 16px;
+}
+.form-login-show {
+  transform: translateX(0);
+}
+.form-login-hidden {
+  transform: translateX(100%);
+}
+.overlow {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

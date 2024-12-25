@@ -1,0 +1,32 @@
+.product-more .btn-dark {
+  position: relative; /* Đặt nút ở trạng thái tương đối */
+  display: inline-block; /* Để pseudo-element hoạt động */
+  color: white; /* Màu chữ ban đầu */
+  background-color: rgb(184, 180, 180); /* Màu nền ban đầu */
+  padding: 10px 20px; /* Khoảng cách nội dung */
+  border: none; /* Bỏ đường viền */
+  text-decoration: none; /* Bỏ gạch chân */
+  overflow: hidden; /* Ẩn phần tử tràn */
+  z-index: 1; /* Đảm bảo nội dung ở trên pseudo-element */
+  transition: color 0.3s ease; /* Chuyển đổi màu chữ */
+}
+
+.product-more .btn-dark::before {
+  content: ""; /* Nội dung giả */
+  position: absolute;
+  top: 0;
+  left: -100%; /* Bắt đầu ngoài màn hình bên trái */
+  width: 100%; /* Chiều rộng phủ đầy */
+  height: 100%; /* Chiều cao phủ đầy */
+  background-color: whitesmoke; /* Màu nền khi hover */
+  z-index: -1; /* Nằm phía sau nội dung */
+  transition: left 0.3s ease; /* Hiệu ứng trượt */
+}
+
+.product-more .btn-dark:hover::before {
+  left: 0; /* Trượt vào từ bên trái */
+}
+
+.product-more .btn-dark:hover {
+  color: black; /* Đổi màu chữ khi hover */
+}

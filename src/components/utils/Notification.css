@@ -1,0 +1,33 @@
+.custom-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #444444; /* Màu nền */
+  color: white; /* Màu chữ */
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  font-size: 1.1rem;
+  animation: fade-in-out 3s forwards;
+  font-weight: 400;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

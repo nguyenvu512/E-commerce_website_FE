@@ -1,0 +1,41 @@
+.current {
+  background: black;
+  color: white;
+}
+.btn {
+  border: none;
+  margin-left: 10px;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+.search {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.product-type {
+  list-style: none;
+  font-size: 18px;
+  font-weight: bold;
+  overflow: hidden;
+}
+.product-type li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+}
+.product-type li {
+  margin-top: 10px;
+}
+.product-type i {
+  cursor: pointer;
+}
+.product-type li a:hover {
+  font-style: italic;
+  text-decoration: underline;
+}

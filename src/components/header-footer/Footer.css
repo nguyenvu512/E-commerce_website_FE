@@ -1,0 +1,25 @@
+.contact a {
+  text-decoration: none;
+  color: red;
+}
+.contact span:first-child {
+  background-color: black;
+  border-radius: 48%;
+}
+.contact span i {
+  color: white;
+}
+.link a {
+  text-decoration: none;
+  color: black;
+}
+.introduce {
+  font-size: 14px;
+}
+.footer {
+  font-size: 14px;
+}
+.prev-contact {
+  height: 50px;
+  align-items: center;
+}

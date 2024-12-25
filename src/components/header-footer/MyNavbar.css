@@ -1,0 +1,165 @@
+.box-search {
+  margin-right: 20px;
+  position: relative;
+}
+.box-search input {
+  height: 35px;
+  width: 350px;
+  font-size: 16px;
+  outline: none;
+  margin-right: 1px;
+  border-radius: 5px;
+}
+.box-search button {
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  width: 50px;
+  background-color: white;
+}
+.box-search button:hover {
+  background-color: black;
+  color: white;
+}
+@media (max-width: 992px) {
+  .box-search {
+    display: none !important;
+  }
+  .box-search-small-screen {
+    display: block !important;
+  }
+  .box-auth {
+    display: none !important;
+  }
+  .box-auth-small-screen {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+  }
+  .box-auth-small-screen i {
+    cursor: pointer;
+    font-size: 16px !important;
+  }
+}
+@media (max-width: 1200px) {
+  .box-search {
+    min-width: 200px !important;
+  }
+  .box-auth {
+    min-width: 250px !important;
+    gap: 15px !important;
+  }
+  .box-auth i {
+    font-size: 14px !important;
+  }
+  .label-auth span {
+    font-size: 14px;
+  }
+}
+.box-search-small-screen {
+  margin-top: 6px;
+  display: none;
+  margin-bottom: 6px;
+}
+.box-search-small-screen input {
+  height: 35px;
+  width: 100%;
+  outline: none;
+}
+.box-search-small-screen button {
+  height: 35px;
+  width: 50px;
+}
+.btn-search-small-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dcdcdc;
+  cursor: pointer;
+}
+.btn-search-small-screen:hover {
+  background-color: black;
+  color: white;
+}
+.box-auth {
+  display: flex;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Phân chia khoảng cách đều giữa các phần tử */
+  flex-wrap: wrap; /* Đảm bảo nội dung sẽ xuống dòng nếu không đủ không gian */
+  width: 100%; /* Chiếm toàn bộ chiều rộng navbar */
+  gap: 10px;
+  /* position: relative; */
+}
+
+.box-search,
+.box-auth {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Cho phép co giãn theo không gian trống */
+  min-width: 300px; /* Đặt kích thước tối thiểu để tránh quá nhỏ */
+  align-self: center;
+  cursor: pointer;
+}
+
+.box-search input {
+  flex: 1; /* Input chiếm toàn bộ chiều rộng còn lại */
+}
+
+.box-search button {
+  margin-left: 5px; /* Khoảng cách giữa input và button */
+}
+.label-auth {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.label-auth .login span:first-child::after {
+  content: "|";
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #333;
+}
+.box-auth-small-screen {
+  display: none;
+  align-items: center;
+}
+.box-auth {
+  gap: 25px;
+}
+.box-auth i {
+  font-size: 20px;
+}
+.islogin {
+  font-size: 16px;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.tools {
+  position: absolute;
+  background: white;
+  width: 100%;
+  z-index: 999;
+}
+.box-islogin {
+  position: relative;
+}
+.tools li {
+  list-style: none;
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-bottom: 1px solid;
+  text-align: center;
+}
+.tools li:last-child {
+  border-bottom: none;
+}
+.tools li:hover {
+  background-color: #e3e3e3;
+}

@@ -1,0 +1,24 @@
+.avata {
+  position: relative;
+}
+.avata i {
+  position: absolute;
+  top: 28%;
+  left: 33%;
+}
+.review {
+  display: flex;
+  align-items: flex-start;
+  gap: 3px;
+  margin-bottom: 5px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.info .time {
+  font-size: 13px;
+}
+.info-content {
+  font-size: 16px;
+}

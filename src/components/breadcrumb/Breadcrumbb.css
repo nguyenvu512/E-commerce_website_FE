@@ -1,0 +1,16 @@
+.breadcrumb-list {
+  display: flex; /* Hiển thị các item theo hàng ngang */
+  gap: 8px;
+}
+.breadcrumb-item {
+  list-style: none;
+}
+.breadcrumb-item a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #6c757d;
+}
+.breadcrumb-item.active {
+  font-size: 18px;
+  font-weight: bold;
+}
