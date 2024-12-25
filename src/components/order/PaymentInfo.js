@@ -32,6 +32,12 @@ const PaymentInfo = ({
         const totalprice1 = parseFloat(totalprice);
         console.log(orderid, totalprice1);
 
+        if(msg.body === "Order successfully processed") {
+          setIsLoading(false);
+          setShowMessageSuccess(true);
+          return;
+        }
+
         if (
           msg.body.includes("Order successfully processed") &&
           orderid !== "" &&
@@ -72,21 +78,20 @@ const PaymentInfo = ({
               );
             });
           return;
-        } else {
-          setIsLoading(false);
-          setShowMessageSuccess(true);
-        }
+        } 
 
         if (msg.body === "Fail(Voucher sold out)") {
           setMessageFail("Đã hết Voucher, vui lòng thử lại!");
           setIsLoading(false);
           setShowMessageFail(true);
+          return;
         }
 
         if (msg.body === "Fail(Product sold out)") {
           setMessageFail("Đã hết sản phẩm, vui lòng thử lại!");
           setIsLoading(false);
           setShowMessageFail(true);
+          return;
         }
       });
     });
