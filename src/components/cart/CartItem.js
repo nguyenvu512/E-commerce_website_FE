@@ -20,9 +20,13 @@ const CartItem = ({
   onQuantityChange,
   selected,
   isChecked,
+
+  deleteCartitem,
 }) => {
   const [quantityProduct, setQuantityProduct] = useState(quantity);
-
+  const deletee = () => {
+    deleteCartitem(1);
+  };
   // ////////////////////////////////////////
   // trích xuất thông tin accountID trong token
   const token = localStorage.getItem("Access_Token");
@@ -100,6 +104,8 @@ const CartItem = ({
           error.response || error.message
         );
       });
+
+    deletee();
   };
 
   // handle click button increase or decrease quantity cart item

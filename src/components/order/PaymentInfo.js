@@ -5,6 +5,10 @@ import axios from "axios";
 import MoneyFormat from "../utils/MoneyFormat";
 import { showNotification } from "../utils/Notification";
 import { jwtDecode } from "jwt-decode";
+import Loading from "../loading/Loading";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 
 const PaymentInfo = ({
   orderedProducts,
@@ -154,6 +158,10 @@ const PaymentInfo = ({
     setTotalMoney(newTotalMoney);
   }, [voucherInfo, totalPrice]); // Chỉ chạy lại khi voucherInfo hoặc totalPrice thay đổi
 
+  dayjs.extend(utc);
+
+// Lấy thời gian hiện tại theo UTC
+
   const orderData = {
     dateCreated: new Date(),
     payment: paymentMethod,
@@ -175,6 +183,11 @@ const PaymentInfo = ({
   };
   // function handle payment click
   const handlePayment = () => {
+    const dateCreated = dayjs().utc().add(7, "hour").format();; 
+    const data1 = {...orderData, dateCreated};
+
+    setIsLoading(true); // Hiển thị spinner trong khi đợi API phản hồi
+
     // check payment information
     if (!orderData.consigneeName) {
       showNotification("Họ tên người nhận không được để trống");
@@ -212,10 +225,8 @@ const PaymentInfo = ({
       return;
     }
 
-    setIsLoading(true); // Hiển thị spinner trong khi đợi API phản hồi
-
     axios
-      .post("http://localhost:8888/api/v1/order-service/create", orderData, {
+      .post("http://localhost:8888/api/v1/order-service/create", data1, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
@@ -328,11 +339,9 @@ const PaymentInfo = ({
       </div>
 
       {/* spiner */}
-      {isLoading && (
-        <div className="overlay">
-          <div className="order-spinner"></div>
-        </div>
-      )}
+      {isLoading && 
+        <Loading />
+      }
 
       {/* Thông báo thành công */}
       {showMessageSuccess && (
@@ -365,7 +374,7 @@ const PaymentInfo = ({
       {/* Thông báo thất bại */}
       {showMessageFail && (
         <>
-          <div className="order-overlay"></div> {/* Overlay dưới thông báo */}
+          <div className="overlay"></div> {/* Overlay dưới thông báo */}
           <div className="failure-message">
             <button className="close-btn" onClick={closeFailMessage}>
               &times;

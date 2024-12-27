@@ -153,3 +153,8 @@
   top: 0;
   left: 0;
 }
+
+.form-register-container{
+  overflow-y: scroll;
+  max-height: 90vh;
+}

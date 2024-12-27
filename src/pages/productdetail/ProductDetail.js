@@ -62,6 +62,30 @@ const ProductDetail = () => {
       );
       if (response.data.code === 1000) {
         showNotification("Đã thêm sản phẩm vào giỏ hàng");
+        axios
+          .get(
+            `http://localhost:8888/api/v1/cart-service/cart/get/${accountID}`,
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+              },
+            }
+          )
+          .then((response) => {
+            if (response.data.code === 1000) {
+              const items = response.data.result.items;
+              setCartItem(items.length);
+            } else {
+              console.error("Lỗi khi gọi api cart:", response.data);
+            }
+          })
+          .catch((error) => {
+            console.error(
+              "Error fetching cart info:",
+              error.response || error.message
+            );
+          });
       }
     } catch (error) {
       console.log(error);
@@ -164,9 +188,11 @@ const ProductDetail = () => {
     );
   };
 
+  // update cart item
+  const [cartItem, setCartItem] = useState();
   return (
     <div>
-      <MyNavbar />
+      <MyNavbar cartItem={cartItem} />
       <FormLogin></FormLogin>
       <Breadcrumbb
         name={restoreSlug(id)}

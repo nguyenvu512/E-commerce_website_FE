@@ -8,6 +8,8 @@ import OrderPage from "../pages/order/OrderPage";
 import PaymentResult from "../components/payment/PaymentResult";
 import SuccessPayment from "../components/payment/SuccessPayment";
 import FailedPayment from "../components/payment/FailPayment";
+import Loading from "../components/loading/Loading";
+
 const Routerr = () => {
   const routes = useRoutes([
     { path: "/", element: <Home /> },
@@ -18,6 +20,7 @@ const Routerr = () => {
     { path: "/payment-success", element: <SuccessPayment /> },
     { path: "/payment-fail", element: <FailedPayment /> },
     { path: "/cart", element: <CartPage /> },
+    { path: "/loading", element: <Loading /> },
   ]);
   return routes;
 };

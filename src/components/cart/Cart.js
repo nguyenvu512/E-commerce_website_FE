@@ -4,7 +4,7 @@ import CartItem from "./CartItem";
 import CartInfo from "./CartInfo";
 import axios from "axios";
 
-const Cart = () => {
+const Cart = ({ deleteCartitem }) => {
   ////////////////////////////////////////////////
   // token test
   const token = localStorage.getItem("Access_Token");
@@ -236,6 +236,7 @@ const Cart = () => {
                       selectedItem.color === item.color &&
                       selectedItem.size === item.size
                   )}
+                  deleteCartitem={deleteCartitem}
                 />
                 {index < cartItems.length - 1 && (
                   <hr
