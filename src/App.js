@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Order from "./components/order/Order";
 import Cart from "./components/cart/Cart";
-import Test from "./components/utils/Test";
 import PaymentResult from "./components/payment/PaymentResult";
 import SuccessPayment from "./components/payment/SuccessPayment";
 import FailedPayment from "./components/payment/FailPayment";
